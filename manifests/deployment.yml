@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: "exampleaks1-77a7"
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: "exampleaks1-77a7"
+  template:
+    metadata:
+      labels:
+        app: "exampleaks1-77a7"
+    spec:
+      containers:
+        - name: "exampleaks1-77a7"
+          image: "acrworkflow1674181911184.azurecr.io/exampleaks1"
+          ports:
+          - containerPort: 8080
